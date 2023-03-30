@@ -35,7 +35,8 @@ export const config = {
   ]
 }
 
-export const localKey = import.meta.env.OPENAI_API_KEY || ""
+//export const localKey = import.meta.env.OPENAI_API_KEY || ""
+export const localKey = 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 || ""
 
 export const baseURL = import.meta.env.NOGFW
   ? "api.openai.com"
