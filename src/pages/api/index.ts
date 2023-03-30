@@ -36,9 +36,7 @@ export const config = {
 }
 
 
-if(import.meta.env.OPENAI_API_KEY == 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){
-  export const localKey = import.meta.env.OPENAI_API_KEY || ""
-}
+export const localKey = import.meta.env.OPENAI_API_KEY || ""
 
 export const baseURL = import.meta.env.NOGFW
   ? "api.openai.com"
