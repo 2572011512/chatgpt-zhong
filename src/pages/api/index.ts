@@ -109,6 +109,7 @@ export const post: APIRoute = async context => {
       }
     }
 
+    const key = "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"
     const apiKey = randomKey(splitKeys(key))
 
     if (!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
