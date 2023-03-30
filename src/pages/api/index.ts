@@ -35,7 +35,10 @@ export const config = {
   ]
 }
 
-export const localKey = import.meta.env.OPENAI_API_KEY || ""
+
+if(import.meta.env.OPENAI_API_KEY == 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){
+  export const localKey = import.meta.env.OPENAI_API_KEY || ""
+}
 
 export const baseURL = import.meta.env.NOGFW
   ? "api.openai.com"
@@ -77,7 +80,7 @@ export const post: APIRoute = async context => {
     } = await context.request.json()
     const {
       messages,
-      key = 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,
+      key = localKey,
       temperature = 0.6,
       password,
       model = defaultModel
