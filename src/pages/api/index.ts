@@ -77,7 +77,7 @@ export const post: APIRoute = async context => {
     } = await context.request.json()
     const {
       messages,
-      key = localKey,
+      key = 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,
       temperature = 0.6,
       password,
       model = defaultModel
