@@ -36,7 +36,7 @@ export const config = {
 }
 
 
-if(import.meta.env.OPENAI_API_KEY == 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){
+if(import.meta.env.OPENAI_API_KEY == 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){
   export const localKey = import.meta.env.OPENAI_API_KEY || ""
 }
 
