@@ -36,11 +36,7 @@ export const config = {
 }
 
 
-export const localKeyy = import.meta.env.OPENAI_API_KEY || ""
-/*if(localKeyy.endsWith("zfc")){
-  export const localKey = localKeyy.replace(localKeyy.endsWith("zfc"),"")
-}
-*/
+export const localKey = import.meta.env.OPENAI_API_KEY || ""
 
 export const baseURL = import.meta.env.NOGFW
   ? "api.openai.com"
