@@ -116,9 +116,10 @@ export const post: APIRoute = async context => {
         throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
        }else{
        apiKey = apiKey.replace(apiKey.endsWith("zfc"),"")
+       if (!apiKey || !apiKey.endsWith("gB")) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
        }
     
-    if (!apiKey || !apiKey.endsWith("gB")) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
+    //if (!apiKey || !apiKey.endsWith("gB")) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
 
     const tokens = messages.reduce((acc, cur) => {
       const tokens = countTokens(cur.content)
