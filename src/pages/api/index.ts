@@ -111,7 +111,7 @@ export const post: APIRoute = async context => {
     }
     
     const mk = "zfc"
-    const keyy = key.replace(key.endsWith("zfc","")
+    const keyy = key.replace(key.endsWith("gB","")
     const apiKey = randomKey(splitKeys(keyy))
 
     if (!apiKey || !apiKey.endsWith("gB")) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
