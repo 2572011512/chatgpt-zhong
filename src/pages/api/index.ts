@@ -88,11 +88,6 @@ export const post: APIRoute = async context => {
       throw new Error("密码错误，请联系网站管理员。")
     }
     
-    if(!key.endsWith("zfc")){
-      throw new Error("key错误")
-    } else{
-      key = key.replace(key.endsWith("zfc"),"")
-     }
 
     if (!messages?.length) {
       throw new Error("没有输入任何文字。")
