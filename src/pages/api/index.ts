@@ -35,7 +35,6 @@ export const config = {
   ]
 }
 
-
 export const localKey = import.meta.env.OPENAI_API_KEY || ""
 
 export const baseURL = import.meta.env.NOGFW
@@ -87,7 +86,6 @@ export const post: APIRoute = async context => {
     if (pwd && pwd !== password) {
       throw new Error("密码错误，请联系网站管理员。")
     }
-    
 
     if (!messages?.length) {
       throw new Error("没有输入任何文字。")
@@ -109,10 +107,9 @@ export const post: APIRoute = async context => {
         return new Response(await genBillingsTable(billings))
       }
     }
-    
-    
+
     const apiKey = randomKey(splitKeys(key))
-      
+
     if (!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
 
     const tokens = messages.reduce((acc, cur) => {
